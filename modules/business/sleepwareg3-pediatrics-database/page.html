@@ -20,9 +20,9 @@
         function numberWithCommas(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
-        var folder="SleepwareG3_Paeds";
+        var folder="Woolcock_Archive\\VMBackup\\SleepwareG3_Paeds";
         m.request_data=function(){
-            $('#folder__ID').text("\\\\fs2.shared.sydney.edu.au\\Medicine\\Woolcock\\Woolcock_Archive\\"+folder)
+            $('#folder__ID').text("\\\\fs2.shared.sydney.edu.au\\Medicine\\Woolcock\\"+folder)
             $vm.request({api:"wimr",cmd:'backup-check',folder:folder},function(res){
                 if(res.status=='np'){
                     alert("Nopermissions.");
